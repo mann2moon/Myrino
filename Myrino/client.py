@@ -23,10 +23,9 @@ class BaseMethod:
 
 class Client(BaseMethod):
 
-    def __init__(self, auth: str, timeout: int = 20, api_version: int = 0) -> None:
+    def __init__(self, auth: str, timeout: int = 20):
         self.auth = auth
         self.timeout = timeout
-        self.api_version = api_version
         self.session = session()
 
     def __enter__(self) -> None:
@@ -37,7 +36,7 @@ class Client(BaseMethod):
 
     def make_json(self, method: str, data: dict) -> dict:
         json: dict = {
-            'api_version': self.api_version,
+            'api_version': '0',
             'auth': self.auth,
             'client': self.client,
             'data': data,
