@@ -5,7 +5,7 @@
 ## Examples
 
 ```python
-from rubinobot import Client
+from myrino import Client
 from asyncio import run
 
 client = Client('YOUR-AUTH')
