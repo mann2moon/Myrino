@@ -59,16 +59,12 @@ class Client(BaseMethod):
         return await Methods._get_profile_info(self, target_profile_id, profile_id)
 
 
-    async def get_guid_by_profile_id(self, target_profile_id: str, profile_id: str = None) -> dict:
-        return await Methods._get_guid_by_profile_id(self, target_profile_id, profile_id)
-
-
     async def get_post_by_share_link(self, share_link: str, profile_id: str = None) -> dict:
         return await Methods._get_post_by_share_link(self, share_link, profile_id)
 
 
-    async def get_me(self, profile_id: str = None) -> dict:
-        return await Methods._get_me(self, profile_id)
+    async def get_my_profile_info(self, profile_id: str = None) -> dict:
+        return await Methods._get_my_profile_info(self, profile_id)
 
 
     async def get_my_archive_stories(
@@ -124,10 +120,10 @@ class Client(BaseMethod):
             self,
             text: str,
             post_id: str,
-            post_profile_id: str,
+            target_profile_id: str,
             profile_id: str = None
     ) -> dict:
-        return await Methods._add_comment(self, text, post_id, post_profile_id, profile_id)
+        return await Methods._add_comment(self, text, post_id, target_profile_id, profile_id)
 
 
     async def like(self, post_id: str, target_profile_id: str, profile_id: str = None) -> dict:
@@ -166,18 +162,18 @@ class Client(BaseMethod):
         return await Methods._get_profile_posts(self, target_profile_id, profile_id, limit, sort, equal)
 
 
-    async def get_profiles_stories(self, profile_id: str, limit: int = 100) -> dict:
-        return await Methods._get_profiles_stories(self, profile_id, limit)
+    async def get_profiles_stories(self, target_profile_id: str, limit: int = 100) -> dict:
+        return await Methods._get_profiles_stories(self, target_profile_id, limit)
 
 
     async def get_recent_following_posts(
             self,
-            profile_id: str,
+            target_profile_id: str,
             limit: int = 30,
             sort: str = 'FromMax',
             equal: bool = False
     ) -> dict:
-        return await Methods._get_recent_following_posts(self, profile_id, limit, sort, equal)
+        return await Methods._get_recent_following_posts(self, target_profile_id, limit, sort, equal)
 
 
     async def get_bookmarked_posts(
@@ -203,7 +199,7 @@ class Client(BaseMethod):
 
     async def get_blocked_profiles(
             self,
-            profile_id: str,
+            profile_id: str = None,
             limit: int = 50,
             sort: str = 'FromMax',
             equal: bool = False
