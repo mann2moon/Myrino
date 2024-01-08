@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='mypackage',
+    name='myrino',
     version='0.1',
     author='amirali irvany',
     author_email='dev.metect@gmail.com',
