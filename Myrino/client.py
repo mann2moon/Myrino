@@ -1,6 +1,6 @@
 '''`Myrino` is an api-based library for Rubino messengers'''
 
-from methods import Methods, randint
+from .methods import Methods, randint
 from requests import session
 
 
@@ -21,7 +21,7 @@ class BaseMethod:
     picture: str = 'Picture'
 
 
-class Client(BaseMethod):
+class Rubino(BaseMethod):
 
     def __init__(self, auth: str, timeout: int = 20):
         self.auth = auth
