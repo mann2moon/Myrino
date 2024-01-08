@@ -5,10 +5,10 @@
 ## Examples
 
 ```python
-from myrino import Rubino
+from myrino import Client
 from asyncio import run
 
-client = Rubino('YOUR-AUTH')
+client = Client('YOUR-AUTH')
 async def main():
     results = await client.follow('followee_id')
     print(results)
@@ -21,10 +21,6 @@ run(main())
 ```bash
 pip install myrino -U
 ```
-
-> [!NOTE]
-> Documents will be posted soon
-
 
 ### contact with me
 [Rubika](https://rubika.ir/slash_dev)
