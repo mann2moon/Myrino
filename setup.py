@@ -1,5 +1,4 @@
 from setuptools import setup, find_packages
-from myrino import __version__, __github__
 
 setup(
     name='myrino',
