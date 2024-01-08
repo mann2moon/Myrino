@@ -5,10 +5,9 @@
 ## Examples
 
 ```python
-from myrino import Client
-from asyncio import run
+from myrino import Rubino
 
-client = Client('YOUR-AUTH')
+client = Rubino('YOUR-AUTH')
 async def main():
     results = await client.follow('followee_id')
     print(results)
