@@ -1,4 +1,4 @@
-from .client import Rubino
+from .client import Client
 
-__version__: int = 0.1
+__version__: int = 0.2
 __github__: str = 'https://github.com/metect'

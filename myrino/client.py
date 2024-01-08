@@ -21,7 +21,7 @@ class BaseMethod:
     picture: str = 'Picture'
 
 
-class Rubino(BaseMethod):
+class Client(BaseMethod):
 
     def __init__(self, auth: str, timeout: int = 20):
         self.auth = auth
