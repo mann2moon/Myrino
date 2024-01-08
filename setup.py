@@ -8,7 +8,7 @@ setup(
     author_email='dev.metect@gmail.com',
     description='Myrino is an api-based library for Rubino messengers',
     long_description=open('README.md', encoding='utf-8').read(),
-    url=__version__,
+    url=__github__,
     install_requires=['requests'],
     packages=find_packages(),
     classifiers=[
