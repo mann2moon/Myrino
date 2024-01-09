@@ -6,7 +6,6 @@
 
 ```python
 from myrino import Rubino
-from asyncio import run
 
 client = Rubino('YOUR-AUTH')
 async def main():
@@ -21,10 +20,6 @@ run(main())
 ```bash
 pip install myrino -U
 ```
-
-> [!NOTE]
-> Documents will be posted soon
-
 
 ### contact with me
 [Rubika](https://rubika.ir/slash_dev)
