@@ -5,9 +5,9 @@
 ## Examples
 
 ```python
-from myrino import Rubino
+from myrino import Client 
 
-client = Rubino('YOUR-AUTH')
+client = Client('YOUR-AUTH')
 async def main():
     results = await client.follow('followee_id')
     print(results)
