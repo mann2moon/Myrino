@@ -9,7 +9,7 @@ from myrino import Client
 
 client = Client('YOUR-AUTH')
 async def main():
-    results = await client.follow('followee_id')
+    results = await client.get_my_profile_info()
     print(results)
 
 
