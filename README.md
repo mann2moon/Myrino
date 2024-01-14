@@ -20,7 +20,3 @@ run(main())
 ```bash
 pip install myrino -U
 ```
-
-### contact with me
-[Rubika](https://rubika.ir/slash_dev)
-[Telegram](https://t.me/activate_sh)
